@@ -32,9 +32,25 @@ jQuery(document).ready(function($) {
 
     (function ($, undefined) {
 
+      var repoBlacklist = [
+        "prismtech.github.io",
+        "vortex-commons",
+        "mvn-repo",
+        "vortex-demo",
+        "vortex-chirpit",
+        "simd-cxx",
+        "dds-psm-cxx",
+        "MPC_ROOT",
+        "snappy-c",
+        "vortex",
+        "simd-java"
+      ];
+
       // Put custom repo URL's in this object, keyed by repo name.
       var repoUrls = {
-        
+        "vortex-spark": "https://prismtech.github.io/vortex-spark/",
+        "vortex-storm": "https://prismtech.github.io/vortex-storm/",
+        "vortex-xamarin": "https://prismtech.github.io/vortex-xamarin/"
       };
 
       function repoUrl(repo) {
@@ -73,12 +89,14 @@ jQuery(document).ready(function($) {
       }
 
       function addRepo(repo) {
-        var $item = $("<li>").addClass("repo grid-1 " + (repo.language || '').toLowerCase());
-        var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($item);
-        $link.append($("<h2>").text(repo.name));
-        $link.append($("<h3>").text(repo.language));
-        $link.append($("<p>").text(repoDescription(repo)));
-        $item.appendTo("#repos");
+        if(!(repoBlacklist.indexOf(repo.name) >= 0)) {
+          var $item = $("<li>").addClass("repo grid-1 " + (repo.language || '').toLowerCase());
+          var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($item);
+          $link.append($("<h2>").text(repo.name));
+          $link.append($("<h3>").text(repo.language));
+          $link.append($("<p>").text(repoDescription(repo)));
+          $item.appendTo("#repos");
+        }
       }
 
       function addRepos(repos, page) {
