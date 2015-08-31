@@ -1,0 +1,23 @@
+# Site settings
+name: PrismTech
+title: PrismTech GitHub Projects
+email: innovation@prismtech.com
+description: > # this means to ignore newlines until "baseurl:"
+  PrismTech's rich and ever growing ecosystem of open-source projects for the Internet of Things (IoT).
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://prismtech.github.io/vortex-spark" # the base hostname & protocol for your site
+twitter_username: VortexDDS
+github_username:  PrismTech
+
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: https://avatars2.githubusercontent.com/u/1701983
+
+# Enter your Disqus shortname (not your username) to enable commenting on posts
+# You can find your shortname on the Settings page of your Disqus account
+disqus:
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: UA-66686350-4
+
+# Build settings
+markdown: kramdown

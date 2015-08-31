@@ -1,0 +1,18 @@
+﻿[
+    {
+      "GithubOrg": "prismtech",
+      "GithubRepo": "vortex-spark"
+    },
+    {
+      "GithubOrg": "prismtech",
+      "GithubRepo": "vortex-storm"
+    },
+    {
+      "GithubOrg": "prismtech",
+      "GithubRepo": "vortex-xamarin"
+    },
+    {
+      "GithubOrg": "prismtech",
+      "GithubRepo": "opensplice",
+    }
+]
